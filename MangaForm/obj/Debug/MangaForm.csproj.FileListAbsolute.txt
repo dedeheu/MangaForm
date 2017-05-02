@@ -26,3 +26,13 @@ E:\Documents\Visual Studio 2017\Projects\MangaForm\MangaForm\obj\Debug\MangaForm
 E:\Documents\Visual Studio 2017\Projects\MangaForm\MangaForm\obj\Debug\MangaForm.csproj.GenerateResource.Cache
 E:\Documents\Visual Studio 2017\Projects\MangaForm\MangaForm\obj\Debug\MangaForm.exe
 E:\Documents\Visual Studio 2017\Projects\MangaForm\MangaForm\obj\Debug\MangaForm.pdb
+C:\Users\julia\Documents\Visual Studio 2017\Projects\MangaForm\MangaForm\obj\Debug\MangaForm.csprojResolveAssemblyReference.cache
+C:\Users\julia\Documents\Visual Studio 2017\Projects\MangaForm\MangaForm\obj\Debug\MangaForm.Form1.resources
+C:\Users\julia\Documents\Visual Studio 2017\Projects\MangaForm\MangaForm\obj\Debug\MangaForm.Properties.Resources.resources
+C:\Users\julia\Documents\Visual Studio 2017\Projects\MangaForm\MangaForm\obj\Debug\MangaForm.csproj.GenerateResource.Cache
+C:\Users\julia\Documents\Visual Studio 2017\Projects\MangaForm\MangaForm\obj\Debug\MangaForm.exe
+C:\Users\julia\Documents\Visual Studio 2017\Projects\MangaForm\MangaForm\obj\Debug\MangaForm.pdb
+C:\Users\julia\Documents\Visual Studio 2017\Projects\MangaForm\MangaForm\bin\Debug\MangaForm.exe.config
+C:\Users\julia\Documents\Visual Studio 2017\Projects\MangaForm\MangaForm\bin\Debug\MangaForm.exe
+C:\Users\julia\Documents\Visual Studio 2017\Projects\MangaForm\MangaForm\bin\Debug\MangaForm.pdb
+C:\Users\julia\Documents\Visual Studio 2017\Projects\MangaForm\MangaForm\bin\Debug\MySql.Data.xml
