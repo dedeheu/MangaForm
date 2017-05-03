@@ -14,7 +14,7 @@ namespace MangaForm
 {
     public partial class Form1 : MetroFramework.Forms.MetroForm
     {
-        DataTable dtManga = Dao.Dao.ReadAll("manga");
+        DataTable dtManga = Dao.DaoManga.ReadAllManga();
         public Form1()
         {
             InitializeComponent();
@@ -36,12 +36,12 @@ namespace MangaForm
             mGridManga.Columns[0].DataPropertyName = "idManga";
             mGridManga.Columns[1].DataPropertyName = "nomManga";
             mGridManga.Columns[2].DataPropertyName = "statutManga";
-          //mGridManga.Columns[3].DataPropertyName = "nbrManga"; TODO : Faire un resultat, qui COUNT(manga), et renvois le résultat sous le noms :"nbrManga"
+            mGridManga.Columns[3].DataPropertyName = "nombreTome";
             mGridManga.DataSource = DataTableForFill;
         }
         private void refreshDtManga()
         {
-            dtManga = Dao.Dao.ReadAll("manga");
+            dtManga = Dao.DaoManga.ReadAllManga();
         }
     }
 }
