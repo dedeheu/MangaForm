@@ -110,25 +110,8 @@ namespace MangaForm.Dao
             }
         }
 
-        public static Manga CountTome(string nomManga)
-        {
 
-            try
-            {
-                open();
-                MySqlCommand cmd = new MySqlCommand();
-                cmd.Connection = conn;
-                cmd.CommandText = "SELECT COUNT(*) FROM tome,manga where tome.idManga = Manga.idManga and Manga.nomManga = " + nomManga;
-
-                
-            }
-            catch
-            {
-
-            }
-        }
-
-        public static DataTable ReadAllTome(string nomManga)
+        public static DataTable CountAllTome()
         {
             DataTable dtRes = new DataTable();
             try
@@ -136,7 +119,7 @@ namespace MangaForm.Dao
                 open();
                 MySqlCommand cmd = new MySqlCommand();
                 cmd.Connection = conn;
-                cmd.CommandText = "SELECT *, COUNT(*) as nombreTome FROM tome,manga where tome.idManga = Manga.idManga and Manga.nomManga = " + nomManga;
+                cmd.CommandText = "SELECT Manga.nomManga, COUNT(*) as nombreTome FROM manga inner join tome on manga.idManga = tome.idManga GROUP BY Manga.idManga";
                 MySqlDataReader res = cmd.ExecuteReader();
                 dtRes.Load(res);
                 close();
@@ -148,23 +131,6 @@ namespace MangaForm.Dao
             }
             return dtRes;
         }
-
-        public static Manga CountManga()
-        {
-            try
-            {
-                open();
-                MySqlCommand cmd = new MySqlCommand();
-                cmd.Connection = conn;
-                cmd.CommandText =""
-            }
-            catch
-            {
-
-            }
-        }
-        
-
         
     }
 }
