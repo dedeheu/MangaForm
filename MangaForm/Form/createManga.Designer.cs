@@ -47,6 +47,8 @@
             // 
             // MtxNomManga
             // 
+            this.MtxNomManga.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             // 
             // 
             // 
@@ -80,9 +82,9 @@
             // createMangaBtn
             // 
             this.createMangaBtn.ActiveControl = null;
-            this.createMangaBtn.Location = new System.Drawing.Point(197, 357);
+            this.createMangaBtn.Location = new System.Drawing.Point(235, 258);
             this.createMangaBtn.Name = "createMangaBtn";
-            this.createMangaBtn.Size = new System.Drawing.Size(245, 51);
+            this.createMangaBtn.Size = new System.Drawing.Size(207, 51);
             this.createMangaBtn.TabIndex = 2;
             this.createMangaBtn.Text = "créer un manga";
             this.createMangaBtn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -91,6 +93,8 @@
             // 
             // MtxSynopsis
             // 
+            this.MtxSynopsis.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             // 
             // 
             // 
@@ -123,6 +127,8 @@
             // 
             // DateParutionDt
             // 
+            this.DateParutionDt.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.DateParutionDt.Location = new System.Drawing.Point(235, 121);
             this.DateParutionDt.MinimumSize = new System.Drawing.Size(0, 29);
             this.DateParutionDt.Name = "DateParutionDt";
@@ -132,6 +138,8 @@
             // AddImageBtn
             // 
             this.AddImageBtn.ActiveControl = null;
+            this.AddImageBtn.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.AddImageBtn.Location = new System.Drawing.Point(478, 121);
             this.AddImageBtn.Name = "AddImageBtn";
             this.AddImageBtn.Size = new System.Drawing.Size(180, 43);
@@ -170,7 +178,7 @@
             // RbtnStatutTerminer
             // 
             this.RbtnStatutTerminer.AutoSize = true;
-            this.RbtnStatutTerminer.Location = new System.Drawing.Point(485, 215);
+            this.RbtnStatutTerminer.Location = new System.Drawing.Point(309, 173);
             this.RbtnStatutTerminer.Name = "RbtnStatutTerminer";
             this.RbtnStatutTerminer.Size = new System.Drawing.Size(70, 15);
             this.RbtnStatutTerminer.TabIndex = 9;
@@ -180,7 +188,7 @@
             // RbtnStatutEnCours
             // 
             this.RbtnStatutEnCours.AutoSize = true;
-            this.RbtnStatutEnCours.Location = new System.Drawing.Point(485, 254);
+            this.RbtnStatutEnCours.Location = new System.Drawing.Point(235, 173);
             this.RbtnStatutEnCours.Name = "RbtnStatutEnCours";
             this.RbtnStatutEnCours.Size = new System.Drawing.Size(68, 15);
             this.RbtnStatutEnCours.TabIndex = 10;
@@ -189,13 +197,14 @@
             // 
             // metroStyleManager1
             // 
-            this.metroStyleManager1.Owner = null;
+            this.metroStyleManager1.Owner = this;
             // 
             // ImageDefault
             // 
-            this.ImageDefault.Location = new System.Drawing.Point(136, 219);
+            this.ImageDefault.Image = global::MangaForm.Properties.Resources.mangaDefaut;
+            this.ImageDefault.Location = new System.Drawing.Point(478, 173);
             this.ImageDefault.Name = "ImageDefault";
-            this.ImageDefault.Size = new System.Drawing.Size(100, 50);
+            this.ImageDefault.Size = new System.Drawing.Size(180, 136);
             this.ImageDefault.TabIndex = 11;
             this.ImageDefault.TabStop = false;
             // 
@@ -203,7 +212,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(681, 431);
+            this.ClientSize = new System.Drawing.Size(681, 333);
             this.Controls.Add(this.ImageDefault);
             this.Controls.Add(this.RbtnStatutEnCours);
             this.Controls.Add(this.RbtnStatutTerminer);

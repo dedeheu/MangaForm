@@ -65,7 +65,7 @@ namespace MangaForm.Dao
                 unManga.IdManga = (int)res["idManga"];
                 unManga.NomManga = (string)res["nomManga"];
                 unManga.Synopsis = (string)res["synopsis"];
-                unManga.Synopsis = (string)res["imageManga"];
+                unManga.ImageManga = (string)res["imageManga"];
                 unManga.StatutManga = (bool)res["statutManga"];
                 unManga.DateParutionManga = (DateTime)res["dateParutionManga"];
                 close();
@@ -113,7 +113,6 @@ namespace MangaForm.Dao
             }
         }
 
-
         public static DataTable ReadAllManga()
         {
             DataTable dtRes = new DataTable();
@@ -122,7 +121,7 @@ namespace MangaForm.Dao
                 open();
                 MySqlCommand cmd = new MySqlCommand();
                 cmd.Connection = conn;
-                cmd.CommandText = "SELECT Manga.nomManga, statutManga, COUNT(tome.idTome) as nombreTome FROM manga LEFT join tome on manga.idManga = tome.idManga GROUP BY Manga.idManga ORDER by manga.nomManga";
+                cmd.CommandText = "SELECT Manga.idManga, Manga.nomManga, statutManga, COUNT(tome.idTome) as nombreTome FROM manga LEFT join tome on manga.idManga = tome.idManga GROUP BY Manga.idManga ORDER by manga.nomManga";
                 MySqlDataReader res = cmd.ExecuteReader();
                 dtRes.Load(res);
                 close();
@@ -135,8 +134,37 @@ namespace MangaForm.Dao
             return dtRes;
         }
 
+        public static Boolean editManga(Manga unManga)
+        {
+            try
+            {
+                open();
+                MySqlCommand cmd = new MySqlCommand();
+                cmd.Connection = conn;
+                cmd.CommandText = "UPDATE manga SET idManga=@idManga,nomManga=@nomManga, synopsis=@synopsis, imageManga=@imageManga, statutManga=@statutManga, dateParutionManga=@dateParutionManga WHERE idManga=" + unManga.IdManga;
 
+                cmd.Prepare();
 
+                cmd.Parameters.AddWithValue("@idManga", unManga.IdManga);
+                cmd.Parameters.AddWithValue("@nomManga", unManga.NomManga);
+                cmd.Parameters.AddWithValue("@synopsis", unManga.Synopsis);
+                cmd.Parameters.AddWithValue("@imageManga", unManga.ImageManga);
+                cmd.Parameters.AddWithValue("@statutManga", unManga.StatutManga);
+                cmd.Parameters.AddWithValue("@dateParutionManga", unManga.DateParutionManga);
+               
+
+                cmd.ExecuteNonQuery();
+
+                close();
+
+                return true;
+            }
+            catch (MySqlException ex)
+            {
+                Console.WriteLine("Error: {0}", ex.ToString());
+                return false;
+            }
+        }
     }
 }
 

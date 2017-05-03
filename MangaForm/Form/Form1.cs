@@ -50,5 +50,35 @@ namespace MangaForm
             formtagueule.Show();
             this.Close();
         }
+
+        private void mGridManga_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+            if (e.ColumnIndex == mGridManga.Columns["Modifier"].Index && e.RowIndex >= 0)
+            {
+                editManga editMangaForm = new editManga(Convert.ToUInt16(mGridManga.Rows[e.RowIndex].Cells[0].Value.ToString()));
+                editMangaForm.Show();
+                this.Close();
+            }
+            else if (e.ColumnIndex == mGridManga.Columns["Supprimer"].Index && e.RowIndex >= 0)
+            {
+                DialogResult result = MetroMessageBox.Show(this, "Voulez vous vraiment supprimer le manga ?", "Confirmer la suppréssion", MessageBoxButtons.YesNo);
+
+                if (result == DialogResult.Yes)
+                {
+                    Dao.Dao.RemoveId(Convert.ToInt16(mGridManga.Rows[e.RowIndex].Cells[0].Value.ToString()), "idManga", "manga");
+                    refreshDtManga();
+                    refreshGrid(dtManga);
+                }
+                else if (result == DialogResult.No)
+                {
+                    // Ne rien faire
+                }
+                else
+                {
+                    MessageBox.Show("Error");
+                }
+            }
+        }
     }
 }
