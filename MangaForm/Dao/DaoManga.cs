@@ -126,6 +126,7 @@ namespace MangaForm.Dao
             {
 
             }
+            return new Manga() ;
         }
 
         public static DataTable ReadAllTome(string nomManga)
@@ -156,12 +157,13 @@ namespace MangaForm.Dao
                 open();
                 MySqlCommand cmd = new MySqlCommand();
                 cmd.Connection = conn;
-                cmd.CommandText =""
+                cmd.CommandText = "";
             }
             catch
             {
 
             }
+            return new Manga();
         }
         
 
