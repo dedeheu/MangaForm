@@ -36,3 +36,17 @@ C:\Users\julia\Documents\Visual Studio 2017\Projects\MangaForm\MangaForm\bin\Deb
 C:\Users\julia\Documents\Visual Studio 2017\Projects\MangaForm\MangaForm\bin\Debug\MangaForm.exe
 C:\Users\julia\Documents\Visual Studio 2017\Projects\MangaForm\MangaForm\bin\Debug\MangaForm.pdb
 C:\Users\julia\Documents\Visual Studio 2017\Projects\MangaForm\MangaForm\bin\Debug\MySql.Data.xml
+C:\Users\dedeh\Source\Repos\MangaForm\MangaForm\bin\Debug\MangaForm.exe.config
+C:\Users\dedeh\Source\Repos\MangaForm\MangaForm\bin\Debug\MangaForm.exe
+C:\Users\dedeh\Source\Repos\MangaForm\MangaForm\bin\Debug\MangaForm.pdb
+C:\Users\dedeh\Source\Repos\MangaForm\MangaForm\bin\Debug\MetroFramework.Design.dll
+C:\Users\dedeh\Source\Repos\MangaForm\MangaForm\bin\Debug\MetroFramework.dll
+C:\Users\dedeh\Source\Repos\MangaForm\MangaForm\bin\Debug\MetroFramework.Fonts.dll
+C:\Users\dedeh\Source\Repos\MangaForm\MangaForm\bin\Debug\MySql.Data.dll
+C:\Users\dedeh\Source\Repos\MangaForm\MangaForm\bin\Debug\MySql.Data.xml
+C:\Users\dedeh\Source\Repos\MangaForm\MangaForm\obj\Debug\MangaForm.csprojResolveAssemblyReference.cache
+C:\Users\dedeh\Source\Repos\MangaForm\MangaForm\obj\Debug\MangaForm.Form1.resources
+C:\Users\dedeh\Source\Repos\MangaForm\MangaForm\obj\Debug\MangaForm.Properties.Resources.resources
+C:\Users\dedeh\Source\Repos\MangaForm\MangaForm\obj\Debug\MangaForm.csproj.GenerateResource.Cache
+C:\Users\dedeh\Source\Repos\MangaForm\MangaForm\obj\Debug\MangaForm.exe
+C:\Users\dedeh\Source\Repos\MangaForm\MangaForm\obj\Debug\MangaForm.pdb

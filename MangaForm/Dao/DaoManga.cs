@@ -129,7 +129,7 @@ namespace MangaForm.Dao
             return new Manga() ;
         }
 
-        public static DataTable ReadAllTome(string nomManga)
+        /*public static DataTable ReadAllTome(string nomManga)
         {
             DataTable dtRes = new DataTable();
             try
@@ -137,7 +137,28 @@ namespace MangaForm.Dao
                 open();
                 MySqlCommand cmd = new MySqlCommand();
                 cmd.Connection = conn;
-                cmd.CommandText = "SELECT Manga.nomManga, COUNT(*) as nombreTome FROM manga inner join tome on manga.idManga = tome.idManga GROUP BY Manga.idManga";
+                cmd.CommandText = "SELECT Manga.nomManga, statutManga, COUNT(*) as nombreTome FROM manga inner join tome on manga.idManga = tome.idManga GROUP BY Manga.idManga";
+                MySqlDataReader res = cmd.ExecuteReader();
+                dtRes.Load(res);
+                close();
+            }
+            catch (MySqlException ex)
+            {
+                Console.WriteLine("Error: {0}", ex.ToString());
+                return dtRes;
+            }
+            return dtRes;
+        }*/
+
+        public static DataTable ReadAllManga()
+        {
+            DataTable dtRes = new DataTable();
+            try
+            {
+                open();
+                MySqlCommand cmd = new MySqlCommand();
+                cmd.Connection = conn;
+                cmd.CommandText = "SELECT Manga.nomManga, statutManga, COUNT(*) as nombreTome FROM manga inner join tome on manga.idManga = tome.idManga GROUP BY Manga.idManga;";
                 MySqlDataReader res = cmd.ExecuteReader();
                 dtRes.Load(res);
                 close();
@@ -150,24 +171,8 @@ namespace MangaForm.Dao
             return dtRes;
         }
 
-        public static Manga CountManga()
-        {
-            try
-            {
-                open();
-                MySqlCommand cmd = new MySqlCommand();
-                cmd.Connection = conn;
-                cmd.CommandText = "";
-            }
-            catch
-            {
 
-            }
-            return new Manga();
-        }
-        
 
-        
     }
 }
 
