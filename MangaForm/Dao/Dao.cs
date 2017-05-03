@@ -19,6 +19,7 @@ namespace MangaForm.Dao
         protected static void open()
         {
             string cs = @"server=localhost;userid=root;password=;database=bibliomanga";
+            string dd = "test";
             try
             {
                 conn = new MySqlConnection(cs);
