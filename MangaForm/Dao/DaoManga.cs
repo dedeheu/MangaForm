@@ -137,7 +137,7 @@ namespace MangaForm.Dao
                 open();
                 MySqlCommand cmd = new MySqlCommand();
                 cmd.Connection = conn;
-                cmd.CommandText = "SELECT *, COUNT(*) as nombreTome FROM tome,manga where tome.idManga = Manga.idManga and Manga.nomManga = " + nomManga;
+                cmd.CommandText = "SELECT Manga.nomManga, COUNT(*) as nombreTome FROM manga inner join tome on manga.idManga = tome.idManga GROUP BY Manga.idManga";
                 MySqlDataReader res = cmd.ExecuteReader();
                 dtRes.Load(res);
                 close();
