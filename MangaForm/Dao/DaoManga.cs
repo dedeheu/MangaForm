@@ -22,13 +22,14 @@ namespace MangaForm.Dao
                 MySqlCommand cmd = new MySqlCommand();
                 cmd.Connection = conn;
 
-                cmd.CommandText = "INSERT INTO manga(idManga, nomManga, synopsis, statutManga, dateParutionManga) VALUES (@idManga, @nomManga, @synopsis, @statutManga, @dateParutionManga)";
+                cmd.CommandText = "INSERT INTO manga(idManga, nomManga, synopsis, imageManga, statutManga, dateParutionManga) VALUES (@idManga, @nomManga, @synopsis, @imageManga, @statutManga, @dateParutionManga)";
 
                 cmd.Prepare();
 
                 cmd.Parameters.AddWithValue("@idManga", unManga.IdManga);
                 cmd.Parameters.AddWithValue("@nomManga", unManga.NomManga);
                 cmd.Parameters.AddWithValue("@synopsis", unManga.Synopsis);
+                cmd.Parameters.AddWithValue("@imageManga", unManga.ImageManga);
                 cmd.Parameters.AddWithValue("@statutManga", unManga.StatutManga);
                 cmd.Parameters.AddWithValue("@dateParutionManga", unManga.DateParutionManga);
 
@@ -64,6 +65,7 @@ namespace MangaForm.Dao
                 unManga.IdManga = (int)res["idManga"];
                 unManga.NomManga = (string)res["nomManga"];
                 unManga.Synopsis = (string)res["synopsis"];
+                unManga.Synopsis = (string)res["imageManga"];
                 unManga.StatutManga = (bool)res["statutManga"];
                 unManga.DateParutionManga = (DateTime)res["dateParutionManga"];
                 close();
@@ -96,6 +98,7 @@ namespace MangaForm.Dao
                 unManga.IdManga = (int)res["idManga"];
                 unManga.NomManga = (string)res["nomManga"];
                 unManga.Synopsis = (string)res["synopsis"];
+                unManga.Synopsis = (string)res["imageManga"];
                 unManga.StatutManga = (bool)res["statutManga"];
                 unManga.DateParutionManga = (DateTime)res["dateParutionManga"];
                 close();
@@ -110,45 +113,6 @@ namespace MangaForm.Dao
             }
         }
 
-        public static Manga CountTome(string nomManga)
-        {
-
-            try
-            {
-                open();
-                MySqlCommand cmd = new MySqlCommand();
-                cmd.Connection = conn;
-                cmd.CommandText = "SELECT COUNT(*) FROM tome,manga where tome.idManga = Manga.idManga and Manga.nomManga = " + nomManga;
-
-                
-            }
-            catch
-            {
-
-            }
-            return new Manga() ;
-        }
-
-        /*public static DataTable ReadAllTome(string nomManga)
-        {
-            DataTable dtRes = new DataTable();
-            try
-            {
-                open();
-                MySqlCommand cmd = new MySqlCommand();
-                cmd.Connection = conn;
-                cmd.CommandText = "SELECT Manga.nomManga, statutManga, COUNT(*) as nombreTome FROM manga inner join tome on manga.idManga = tome.idManga GROUP BY Manga.idManga";
-                MySqlDataReader res = cmd.ExecuteReader();
-                dtRes.Load(res);
-                close();
-            }
-            catch (MySqlException ex)
-            {
-                Console.WriteLine("Error: {0}", ex.ToString());
-                return dtRes;
-            }
-            return dtRes;
-        }*/
 
         public static DataTable ReadAllManga()
         {
@@ -158,7 +122,7 @@ namespace MangaForm.Dao
                 open();
                 MySqlCommand cmd = new MySqlCommand();
                 cmd.Connection = conn;
-                cmd.CommandText = "SELECT Manga.nomManga, statutManga, COUNT(*) as nombreTome FROM manga inner join tome on manga.idManga = tome.idManga GROUP BY Manga.idManga;";
+                cmd.CommandText = "SELECT Manga.nomManga, statutManga, COUNT(tome.idTome) as nombreTome FROM manga LEFT join tome on manga.idManga = tome.idManga GROUP BY Manga.idManga ORDER by manga.nomManga";
                 MySqlDataReader res = cmd.ExecuteReader();
                 dtRes.Load(res);
                 close();

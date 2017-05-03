@@ -43,5 +43,12 @@ namespace MangaForm
         {
             dtManga = Dao.DaoManga.ReadAllManga();
         }
+
+        private void metroTile1_Click(object sender, EventArgs e)
+        {
+            createManga formtagueule = new createManga();
+            formtagueule.Show();
+            this.Close();
+        }
     }
 }

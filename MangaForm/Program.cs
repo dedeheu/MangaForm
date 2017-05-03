@@ -17,7 +17,9 @@ namespace MangaForm
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());  
+            Form1 Accueil = new Form1();
+            Accueil.Show();
+            Application.Run();  
         }
     }
 }

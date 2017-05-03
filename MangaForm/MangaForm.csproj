@@ -66,6 +66,12 @@
     <Compile Include="Classes\Manga.cs" />
     <Compile Include="Classes\Tome.cs" />
     <Compile Include="Classes\Genre.cs" />
+    <Compile Include="Form\createManga.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\createManga.Designer.cs">
+      <DependentUpon>createManga.cs</DependentUpon>
+    </Compile>
     <Compile Include="Dao\Dao.cs" />
     <Compile Include="Dao\DaoCategorie.cs" />
     <Compile Include="Dao\DaoManga.cs" />
@@ -79,6 +85,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Form\createManga.resx">
+      <DependentUpon>createManga.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form\Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>

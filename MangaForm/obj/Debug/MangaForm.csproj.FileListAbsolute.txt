@@ -50,3 +50,4 @@ C:\Users\dedeh\Source\Repos\MangaForm\MangaForm\obj\Debug\MangaForm.Properties.R
 C:\Users\dedeh\Source\Repos\MangaForm\MangaForm\obj\Debug\MangaForm.csproj.GenerateResource.Cache
 C:\Users\dedeh\Source\Repos\MangaForm\MangaForm\obj\Debug\MangaForm.exe
 C:\Users\dedeh\Source\Repos\MangaForm\MangaForm\obj\Debug\MangaForm.pdb
+C:\Users\dedeh\Source\Repos\MangaForm\MangaForm\obj\Debug\MangaForm.createManga.resources

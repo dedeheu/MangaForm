@@ -11,7 +11,7 @@ namespace MangaForm.Classes
         private int idManga;
         private string nomManga;
         private string synopsis;
-        //a faire ajout d'une image
+        private string imageManga;
         private bool statutManga;
         private DateTime dateParutionManga;
         public Manga() { }
@@ -19,6 +19,7 @@ namespace MangaForm.Classes
         public int IdManga { get => idManga; set => idManga = value; }
         public string NomManga { get => nomManga; set => nomManga = value; }
         public string Synopsis { get => synopsis; set => synopsis = value; }
+        public string ImageManga { get => imageManga; set => imageManga = value; }
         public bool StatutManga { get => statutManga; set => statutManga = value; }
         public DateTime DateParutionManga { get => dateParutionManga; set => dateParutionManga = value; }
     }
