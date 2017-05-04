@@ -47,7 +47,7 @@ namespace MangaForm.Dao
 
         }
 
-        public static Categorie ReadOneId(int id)
+        public static Categorie ReadOneId(int idCat)
             {
                 Categorie uneCategorie = null;
 
@@ -56,7 +56,7 @@ namespace MangaForm.Dao
                     open();
                     MySqlCommand cmd = new MySqlCommand();
                     cmd.Connection = conn;
-                    cmd.CommandText = "SELECT * FROM categorie WHERE idManga=" + id;
+                    cmd.CommandText = "SELECT * FROM categorie WHERE idCat =" + idCat;
 
                     MySqlDataReader res = cmd.ExecuteReader();
 
@@ -101,6 +101,32 @@ namespace MangaForm.Dao
                 Console.WriteLine("Error: {0}", ex.ToString());
 
                 return uneCategorie;
+            }
+        }
+        public static Boolean editCategorie(Categorie uneCategorie)
+        {
+            try
+            {
+                open();
+                MySqlCommand cmd = new MySqlCommand();
+                cmd.Connection = conn;
+                cmd.CommandText = "UPDATE categorie SET idCat=@idCat, libelle_cat=@libelle_cat WHERE idCat =" + uneCategorie.IdCat;
+
+                cmd.Prepare();
+
+                cmd.Parameters.AddWithValue("@idCat", uneCategorie.IdCat);
+                cmd.Parameters.AddWithValue("@libelle_cat", uneCategorie.Libelle_Cat);
+               
+                cmd.ExecuteNonQuery();
+
+                close();
+
+                return true;
+            }
+            catch (MySqlException ex)
+            {
+                Console.WriteLine("Error: {0}", ex.ToString());
+                return false;
             }
         }
     }

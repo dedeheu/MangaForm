@@ -82,7 +82,7 @@ namespace MangaForm.Dao
                 open();
                 MySqlCommand cmd = new MySqlCommand();
                 cmd.Connection = conn;
-                cmd.CommandText = "SELECT * FROM categorie WHERE libelle_Type=" + libelle_Type;
+                cmd.CommandText = "SELECT * FROM type WHERE libelle_Type=" + libelle_Type;
 
                 MySqlDataReader res = cmd.ExecuteReader();
 
@@ -99,6 +99,33 @@ namespace MangaForm.Dao
                 Console.WriteLine("Error: {0}", ex.ToString());
 
                 return unGenre;
+            }
+        }
+
+        public static Boolean editGenre(Genre unType)
+        {
+            try
+            {
+                open();
+                MySqlCommand cmd = new MySqlCommand();
+                cmd.Connection = conn;
+                cmd.CommandText = "UPDATE type SET idType=@idType, libelle_Type=@libelle_Type WHERE idCat =" + unType.IdType;
+
+                cmd.Prepare();
+
+                cmd.Parameters.AddWithValue("@idType", unType.IdType);
+                cmd.Parameters.AddWithValue("@libelle_Type", unType.Libelle_Type);
+
+                cmd.ExecuteNonQuery();
+
+                close();
+
+                return true;
+            }
+            catch (MySqlException ex)
+            {
+                Console.WriteLine("Error: {0}", ex.ToString());
+                return false;
             }
         }
     }
