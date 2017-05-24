@@ -28,9 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.MtxEditCategorie = new MetroFramework.Controls.MetroTextBox();
             this.LblEditCategorie = new MetroFramework.Controls.MetroLabel();
             this.BtnEditCategorie = new MetroFramework.Controls.MetroTile();
+            this.metroStyleManager1 = new MetroFramework.Components.MetroStyleManager(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.metroStyleManager1)).BeginInit();
             this.SuspendLayout();
             // 
             // MtxEditCategorie
@@ -86,6 +89,10 @@
             this.BtnEditCategorie.UseSelectable = true;
             this.BtnEditCategorie.Click += new System.EventHandler(this.BtnEditCategorie_Click);
             // 
+            // metroStyleManager1
+            // 
+            this.metroStyleManager1.Owner = this;
+            // 
             // editCategorie
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -96,6 +103,7 @@
             this.Controls.Add(this.MtxEditCategorie);
             this.Name = "editCategorie";
             this.Text = "editCategorie";
+            ((System.ComponentModel.ISupportInitialize)(this.metroStyleManager1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -106,5 +114,6 @@
         private MetroFramework.Controls.MetroTextBox MtxEditCategorie;
         private MetroFramework.Controls.MetroLabel LblEditCategorie;
         private MetroFramework.Controls.MetroTile BtnEditCategorie;
+        private MetroFramework.Components.MetroStyleManager metroStyleManager1;
     }
 }

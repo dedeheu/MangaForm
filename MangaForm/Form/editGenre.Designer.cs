@@ -28,9 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.BtnEditGenre = new MetroFramework.Controls.MetroTile();
             this.MtxEditGenre = new MetroFramework.Controls.MetroTextBox();
             this.LblEditGenre = new MetroFramework.Controls.MetroLabel();
+            this.metroStyleManager1 = new MetroFramework.Components.MetroStyleManager(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.metroStyleManager1)).BeginInit();
             this.SuspendLayout();
             // 
             // BtnEditGenre
@@ -86,6 +89,10 @@
             this.LblEditGenre.TabIndex = 2;
             this.LblEditGenre.Text = "nouveau libelle";
             // 
+            // metroStyleManager1
+            // 
+            this.metroStyleManager1.Owner = this;
+            // 
             // editGenre
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -96,6 +103,7 @@
             this.Controls.Add(this.BtnEditGenre);
             this.Name = "editGenre";
             this.Text = "editGenre";
+            ((System.ComponentModel.ISupportInitialize)(this.metroStyleManager1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -106,5 +114,6 @@
         private MetroFramework.Controls.MetroTile BtnEditGenre;
         private MetroFramework.Controls.MetroTextBox MtxEditGenre;
         private MetroFramework.Controls.MetroLabel LblEditGenre;
+        private MetroFramework.Components.MetroStyleManager metroStyleManager1;
     }
 }

@@ -28,9 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.MtxLibelleGenre = new MetroFramework.Controls.MetroTextBox();
             this.BtnAddGenre = new MetroFramework.Controls.MetroTile();
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
+            this.metroStyleManager1 = new MetroFramework.Components.MetroStyleManager(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.metroStyleManager1)).BeginInit();
             this.SuspendLayout();
             // 
             // MtxLibelleGenre
@@ -86,6 +89,10 @@
             this.metroLabel1.TabIndex = 2;
             this.metroLabel1.Text = "un genre";
             // 
+            // metroStyleManager1
+            // 
+            this.metroStyleManager1.Owner = this;
+            // 
             // createGenre
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -96,6 +103,7 @@
             this.Controls.Add(this.MtxLibelleGenre);
             this.Name = "createGenre";
             this.Text = "createGenre";
+            ((System.ComponentModel.ISupportInitialize)(this.metroStyleManager1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -106,5 +114,6 @@
         private MetroFramework.Controls.MetroTextBox MtxLibelleGenre;
         private MetroFramework.Controls.MetroTile BtnAddGenre;
         private MetroFramework.Controls.MetroLabel metroLabel1;
+        private MetroFramework.Components.MetroStyleManager metroStyleManager1;
     }
 }

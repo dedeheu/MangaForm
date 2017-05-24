@@ -43,6 +43,8 @@
             this.metroTile1 = new MetroFramework.Controls.MetroTile();
             this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
             this.dataGridViewImageColumn2 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.GandTBtn = new MetroFramework.Controls.MetroTile();
+            this.ReadAllTomeBtn = new MetroFramework.Controls.MetroTile();
             ((System.ComponentModel.ISupportInitialize)(this.metroStyleManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mGridManga)).BeginInit();
             this.SuspendLayout();
@@ -182,11 +184,36 @@
             this.dataGridViewImageColumn2.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.dataGridViewImageColumn2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             // 
+            // GandTBtn
+            // 
+            this.GandTBtn.ActiveControl = null;
+            this.GandTBtn.Location = new System.Drawing.Point(341, 13);
+            this.GandTBtn.Name = "GandTBtn";
+            this.GandTBtn.Size = new System.Drawing.Size(134, 44);
+            this.GandTBtn.TabIndex = 3;
+            this.GandTBtn.Text = "Genre et type";
+            this.GandTBtn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.GandTBtn.UseSelectable = true;
+            // 
+            // ReadAllTomeBtn
+            // 
+            this.ReadAllTomeBtn.ActiveControl = null;
+            this.ReadAllTomeBtn.Location = new System.Drawing.Point(497, 13);
+            this.ReadAllTomeBtn.Name = "ReadAllTomeBtn";
+            this.ReadAllTomeBtn.Size = new System.Drawing.Size(104, 44);
+            this.ReadAllTomeBtn.TabIndex = 4;
+            this.ReadAllTomeBtn.Text = "Les tomes";
+            this.ReadAllTomeBtn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.ReadAllTomeBtn.UseSelectable = true;
+            this.ReadAllTomeBtn.Click += new System.EventHandler(this.ReadAllTomeBtn_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(795, 388);
+            this.Controls.Add(this.ReadAllTomeBtn);
+            this.Controls.Add(this.GandTBtn);
             this.Controls.Add(this.metroTile1);
             this.Controls.Add(this.mGridManga);
             this.Name = "Form1";
@@ -211,6 +238,8 @@
         private System.Windows.Forms.DataGridViewImageColumn Modifier;
         private System.Windows.Forms.DataGridViewImageColumn Supprimer;
         private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn2;
+        private MetroFramework.Controls.MetroTile ReadAllTomeBtn;
+        private MetroFramework.Controls.MetroTile GandTBtn;
     }
 }
 

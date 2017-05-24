@@ -54,3 +54,8 @@ C:\Users\dedeh\Source\Repos\MangaForm\MangaForm\obj\Debug\MangaForm.createManga.
 C:\Users\dedeh\Source\Repos\MangaForm\MangaForm\obj\Debug\MangaForm.editManga.resources
 C:\Users\dedeh\Source\Repos\MangaForm\MangaForm\obj\Debug\MangaForm.createCategorie.resources
 C:\Users\dedeh\Source\Repos\MangaForm\MangaForm\obj\Debug\MangaForm.editCategorie.resources
+C:\Users\dedeh\Source\Repos\MangaForm\MangaForm\obj\Debug\MangaForm.createGenre.resources
+C:\Users\dedeh\Source\Repos\MangaForm\MangaForm\obj\Debug\MangaForm.editGenre.resources
+C:\Users\dedeh\Source\Repos\MangaForm\MangaForm\obj\Debug\MangaForm.createTome.resources
+C:\Users\dedeh\Source\Repos\MangaForm\MangaForm\obj\Debug\MangaForm.readAllTome.resources
+C:\Users\dedeh\Source\Repos\MangaForm\MangaForm\obj\Debug\MangaForm.editTome.resources

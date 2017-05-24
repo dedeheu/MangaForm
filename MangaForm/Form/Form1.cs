@@ -80,5 +80,12 @@ namespace MangaForm
                 }
             }
         }
+
+        private void ReadAllTomeBtn_Click(object sender, EventArgs e)
+        {
+            readAllTome formtagueule = new readAllTome();
+            formtagueule.Show();
+            this.Close();
+        }
     }
 }

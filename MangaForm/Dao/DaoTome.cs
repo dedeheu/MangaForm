@@ -113,6 +113,57 @@ namespace MangaForm.Dao
                 return leTome;
             }
         }
+
+        public static DataTable ReadAllTome()
+        {
+            DataTable dtRes = new DataTable();
+            try
+            {
+                open();
+                MySqlCommand cmd = new MySqlCommand();
+                cmd.Connection = conn;
+                cmd.CommandText = "SELECT * FROM tome where 1";
+                MySqlDataReader res = cmd.ExecuteReader();
+                dtRes.Load(res);
+                close();
+            }
+            catch (MySqlException ex)
+            {
+                Console.WriteLine("Error: {0}", ex.ToString());
+                return dtRes;
+            }
+            return dtRes;
+        }
+
+        public static Boolean editTome(Tome leTome)
+        {
+            try
+            {
+                open();
+                MySqlCommand cmd = new MySqlCommand();
+                cmd.Connection = conn;
+                cmd.CommandText = "UPDATE tome SET idTome=@idTome,numeroTome=@numeroTome, titreTome=@titreTome, resumerTome=@resumerTome, dateAchatTome=@dateAchatTome WHERE idTome=" + leTome.IdTome;
+
+                cmd.Prepare();
+
+                cmd.Parameters.AddWithValue("@idTome", leTome.IdTome);
+                cmd.Parameters.AddWithValue("@numeroTome", leTome.NumeroTome);
+                cmd.Parameters.AddWithValue("@titreTome", leTome.TitreTome);
+                cmd.Parameters.AddWithValue("@resumerTome", leTome.ResumerTome);
+                cmd.Parameters.AddWithValue("@dateAchatTome", leTome.DateAchatTome);
+
+                cmd.ExecuteNonQuery();
+
+                close();
+
+                return true;
+            }
+            catch (MySqlException ex)
+            {
+                Console.WriteLine("Error: {0}", ex.ToString());
+                return false;
+            }
+        }
     }
 }
 
